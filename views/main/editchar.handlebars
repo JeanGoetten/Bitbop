@@ -1,0 +1,47 @@
+{{#each erros}}
+    <div class="alert alert-danger">
+        {{text}}
+    </div>
+{{else}}
+
+{{/each}}
+
+<div class="mx-auto">
+    <h3>Criar personagem: </h3>
+<form action="/create/nova" method="POST">
+<input type="hidden" name="id" value="{{new_chars._id}}">
+    <label for="nome">Nome: </label>
+    <input type="text" id="nome" name="nome" placeholder="nome do personagem" class="form-control" value="{{new_chars.nome}}">
+    <br>
+    <label for="cor">Cor: </label>
+    <input type="text" id="nome" name="cor" placeholder="cor do personagem" class="form-control" value="{{new_chars.cor}}">
+    <br>
+    <label for="life">Life: </label>
+    <input type="text" id="nome" name="life" placeholder="life do personagem" class="form-control" value="{{new_chars.life}}">
+    <br>
+    <label for="mana">Mana: </label>
+    <input type="text" id="nome" name="mana" placeholder="mana do personagem" class="form-control" value="{{new_chars.mana}}">
+    <br>
+    <label for="level">Level: </label>
+    <input type="text" id="nome" name="level" placeholder="level do personagem" class="form-control" value="{{new_chars.level}}">
+    <br>
+    <label for="align">Align: </label>
+    <input type="text" id="nome" name="align" placeholder="Align do personagem" class="form-control" value="{{new_chars.align}}">
+    <br>
+    <label for="last_fight">last_fight: </label>
+    <input type="text" id="nome" name="last_fight" placeholder="last_fight do personagem" class="form-control" value="{{new_chars.last_fight}}">
+    <br>
+    <label for="victorys">Victorys: </label>
+    <input type="text" id="nome" name="victorys" placeholder="victorys do personagem" class="form-control" value="{{new_chars.victorys}}">
+    <br>
+    <label for="loses">Loses: </label>
+    <input type="text" id="nome" name="loses" placeholder="loses do personagem" class="form-control" value="{{new_chars.loses}}">
+    <br>
+    <label for="score">Score: </label>
+    <input type="text" id="nome" name="score" placeholder="score do personagem" class="form-control" value="{{new_chars.score}}">
+    <br>
+    <button type="submit" class="btn btn-dark">Salvar</button>
+    <br>
+    <br>
+</form>
+</div>
