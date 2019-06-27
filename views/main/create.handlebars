@@ -1,0 +1,30 @@
+<div class="mx-auto bg-transparent">
+    {{#each new_adventure}}
+        <div class="card-deck m-3" style="width: 18rem;">
+            <div style="position: absolute">
+                <form action="/create/deletar" method="POST"> 
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="close"> X </button>
+            </form>
+            </div>
+            <form action="/game/new:{{_id}}" method="GET">
+                <input type="hidden" name="id" value="{{_id}}"> 
+                <button type="submit" class="{{button}}">
+                    <img class="card-img-top" src="{{avatar}}" alt="CHAR">
+                <div class="card-body">
+                    <h5 class="card-title">{{nome}}</h5>
+                    <p class="card-text">{{align}}</p>
+                </div>
+                </button>
+                <span align='right'>create at: {{hour}}:{{minute}} - {{day}}/{{month}}/{{year}}</span>
+            </form>
+        </div>
+    {{else}}
+    
+    <hr>
+    <div align="center">
+        <a href="/create/addchar"><button class="btn btn-dark btn-lg">Nova Aventura</button></a>
+        <br><br>
+    </div>
+    {{/each}}
+</div>
